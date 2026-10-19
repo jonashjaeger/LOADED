@@ -2,3 +2,26 @@
 @media(max-width:760px){.app-shell{padding:0 18px}.topbar{height:70px}.wordmark{font-size:23px}.brand-symbol{font-size:23px}.top-kicker{display:none}.desktop-nav{display:none}.page-head{padding:26px 0 24px;align-items:flex-start}.page-head h1{font-size:40px}.page-head .btn{padding:12px 13px}.stats{gap:8px}.stat-card{padding:14px;border-radius:15px}.stat-card strong{font-size:25px}.stat-card span{font-size:11px;min-height:28px}.camera-grid{grid-template-columns:1fr}.section-header{margin-top:24px}.mobile-nav{position:fixed;bottom:0;left:0;right:0;z-index:10;display:grid;grid-template-columns:repeat(4,1fr);background:#fff;border-top:1px solid #dce3da;padding:8px 4px calc(7px + env(safe-area-inset-bottom,0px));box-shadow:0 -8px 30px #213b2b0b}.mobile-nav button{padding:6px 1px;border:0;background:none;color:#8c9890;display:flex;flex-direction:column;align-items:center;gap:2px;font-size:10px;font-weight:800}.mobile-nav button.active{color:#205542}.nav-emoji{font-size:22px;line-height:1.2}.app-footer{padding-bottom:110px}.modal-root{align-items:flex-end;padding:0}.modal-panel{border-radius:22px 22px 0 0;max-width:none;max-height:91dvh;padding:22px 18px calc(22px + env(safe-area-inset-bottom,0px))}.roll-row{grid-template-columns:34px minmax(0,1fr);padding:14px}.roll-disc{width:34px;height:34px;border-width:7px}.roll-row-actions{grid-column:2;justify-content:flex-start}.section-panel{padding:19px}.toast{bottom:100px}.two-col{grid-template-columns:1fr}.section-header h2{font-size:21px}}
 @media(max-width:410px){.page-head{flex-wrap:wrap}.page-head .btn{width:100%}.stat-card strong{font-size:21px}.stat-card{padding:11px}.form-grid{gap:10px}.camera-actions .btn{font-size:13px;padding:10px}.roll-row h3{font-size:14px}}
 @media(prefers-reduced-motion:no-preference){.camera-card,.btn,.icon-button{transition:filter .17s,transform .17s}.btn:active{transform:scale(.98)}}
+
+/* v1.1 film inventory */
+.inventory-strip{display:flex;gap:18px;justify-content:space-between;align-items:center;background:#eaf0e8;border:1px solid #d5e1d5;border-radius:16px;padding:17px 20px;margin:0 0 23px}
+.inventory-strip p{margin:5px 0 0;color:#708075;font-size:12px}
+.inventory-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:15px}
+.inventory-card{border:1px solid var(--stroke);border-radius:18px;background:#fff;padding:20px;box-shadow:var(--shadow);min-width:0}
+.inventory-top{display:flex;justify-content:space-between;gap:8px;align-items:center}
+.inventory-format{color:#768879;text-transform:uppercase;letter-spacing:1.3px;font-size:11px;font-weight:800}
+.inventory-stock{font-weight:810;font-size:19px;overflow-wrap:anywhere;margin:15px 0 5px}
+.inventory-card p{color:#7a897d;font-size:12px;margin:0 0 18px;line-height:1.5}
+.inventory-bottom{display:flex;justify-content:space-between;align-items:center;gap:12px;border-top:1px solid #e7eee6;padding-top:13px;flex-wrap:wrap}
+.inventory-quantity{display:flex;align-items:baseline;gap:7px}.inventory-quantity strong{font-size:29px}.inventory-quantity span{font-size:12px;color:#76877c}
+.inventory-card .stock-footnote{margin:10px 0 0;overflow-wrap:anywhere}
+.archived-row{border-top:1px solid #eee;padding:10px 0;display:flex;justify-content:space-between;align-items:center;gap:12px}
+.btn:disabled{opacity:.5;cursor:not-allowed}
+@media(max-width:760px){.mobile-nav{grid-template-columns:repeat(5,1fr)}.inventory-grid{grid-template-columns:1fr}.inventory-strip{align-items:flex-start;flex-direction:column;gap:9px}.inventory-strip .btn{width:100%}}
+
+/* v1.2 stock-by-stock film usage */
+.usage-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.usage-card{background:#fff;border:1px solid var(--stroke);border-radius:18px;padding:20px;min-width:0;box-shadow:var(--shadow)}.usage-head{display:flex;align-items:center;justify-content:space-between;gap:12px}.usage-stock{font-weight:800;font-size:18px;overflow-wrap:anywhere}.usage-metrics{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;padding:19px 0 14px}.usage-metrics>div{display:flex;flex-direction:column;gap:3px}.usage-metrics strong{font-size:25px}.usage-metrics small{font-size:11px;color:#76877c}.usage-track{height:8px;background:#e8ece6;overflow:hidden;border-radius:12px}.usage-track>div{height:100%;background:#b77e4b;border-radius:12px}.usage-foot{font-size:11px;color:#7d8b81;margin-top:10px}
+@media(max-width:760px){.usage-list{grid-template-columns:1fr}}
+
+.stats-four{grid-template-columns:repeat(4,minmax(0,1fr))}
+@media(max-width:760px){.stats-four{grid-template-columns:repeat(2,minmax(0,1fr))}}

@@ -1,4 +1,4 @@
-const CACHE='loaded-film-journal-v1.0.1';
+const CACHE='loaded-film-journal-v1.2.0';
 const FILES=['./','./index.html','./app.js','./styles.css','./manifest.webmanifest','./icon.svg','./icon-192.png','./icon-512.png'];
 self.addEventListener('install',event=>{event.waitUntil(caches.open(CACHE).then(cache=>cache.addAll(FILES)))});
 self.addEventListener('activate',event=>{event.waitUntil(Promise.all([caches.keys().then(keys=>Promise.all(keys.filter(key=>key.startsWith('loaded-film-journal-')&&key!==CACHE).map(key=>caches.delete(key)))),self.clients.claim()]))});
