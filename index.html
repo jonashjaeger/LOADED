@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#181d20">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="LOADED">
+  <meta name="description" content="Know which camera has which film. An offline film photography journal.">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" type="image/svg+xml" href="icon.svg">
+  <link rel="apple-touch-icon" href="icon-192.png">
+  <link rel="stylesheet" href="styles.css?v=1.0.0">
+  <title>LOADED — Film in your cameras</title>
+  <script src="app.js?v=1.0.0" defer></script>
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar">
+      <a class="wordmark" href="#home" aria-label="LOADED home"><span class="brand-symbol">▣</span> LOADED<span class="wordmark-dot">.</span></a>
+      <div class="topbar-right"><span class="top-kicker">FILM CAMERA JOURNAL</span><button class="icon-button" data-action="open-settings" aria-label="Settings"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.8 1.8 0 0 0 .36 2l-1.7 1.7a1.8 1.8 0 0 0-2-.36 1.8 1.8 0 0 0-1.1 1.67V21h-2.4v-.99a1.8 1.8 0 0 0-1.1-1.67 1.8 1.8 0 0 0-2 .36L7.76 17a1.8 1.8 0 0 0 .36-2A1.8 1.8 0 0 0 6.45 14H5.5v-2.4h.95a1.8 1.8 0 0 0 1.67-1.1 1.8 1.8 0 0 0-.36-2l1.7-1.7a1.8 1.8 0 0 0 2 .36 1.8 1.8 0 0 0 1.1-1.67V4.5h2.4v.99a1.8 1.8 0 0 0 1.1 1.67 1.8 1.8 0 0 0 2-.36l1.7 1.7a1.8 1.8 0 0 0-.36 2A1.8 1.8 0 0 0 21 11.6h.95V14H21A1.8 1.8 0 0 0 19.4 15Z" transform="translate(-1 -1)"/></svg></button></div>
+    </header>
+    <nav class="desktop-nav" aria-label="Main navigation"><button data-page="home">Overview</button><button data-page="cameras">Cameras</button><button data-page="rolls">Roll archive</button><button data-page="settings">Settings & backup</button></nav>
+    <div id="update-notice" class="update-notice hidden" role="status"><span>There’s a newer version of LOADED ready.</span><button id="update-now" class="btn btn-small">Update app</button></div>
+    <main id="view" tabindex="-1"></main>
+    <footer class="app-footer"><span>LOADED · v1.0.0</span><span>Private by design · Stored on this device</span></footer>
+  </div>
+  <nav class="mobile-nav" aria-label="Main navigation">
+    <button data-page="home"><span class="nav-emoji" aria-hidden="true">▣</span><span>Overview</span></button>
+    <button data-page="cameras"><span class="nav-emoji" aria-hidden="true">▤</span><span>Cameras</span></button>
+    <button data-page="rolls"><span class="nav-emoji" aria-hidden="true">◫</span><span>Rolls</span></button>
+    <button data-page="settings"><span class="nav-emoji" aria-hidden="true">⚙</span><span>Backup</span></button>
+  </nav>
+  <div id="modal" class="modal-root hidden" aria-hidden="true"><div class="modal-scrim" data-action="close-modal"></div><div class="modal-panel" role="dialog" aria-modal="true" aria-labelledby="modal-title"><div class="modal-head"><div><div class="eyebrow">LOADED JOURNAL</div><h2 id="modal-title">Edit</h2></div><button type="button" class="icon-button close" data-action="close-modal" aria-label="Close">✕</button></div><div id="modal-body"></div></div></div>
+  <div id="toast" class="toast hidden" role="status" aria-live="polite"></div>
+</body>
+</html>
